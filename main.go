@@ -7,6 +7,7 @@ import (
 
 var solveFuncs = map[string]func() int {
   "1": solve1,
+  "5": solve5,
 }
 
 func main() {
