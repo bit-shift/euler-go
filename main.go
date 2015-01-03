@@ -11,6 +11,10 @@ var solveFuncs = map[string]func() int {
 }
 
 func main() {
+  if len(os.Args) == 1 {
+    fmt.Println("usage:", os.Args[0], "PROBLEM_NUMBER [PROBLEM_NUMBER...]")
+  }
+
   for _, problem := range os.Args[1:] {
     if f, ok := solveFuncs[problem]; ok {
       fmt.Println(problem, "->\t", f())
